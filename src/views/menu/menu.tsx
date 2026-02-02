@@ -10,7 +10,7 @@ export default function Menu() {
   const currentCar = cars[currentCarIndex];
   const currentCircuit = circuits[currentCircuitIndex];
 
-  const { setSelectedCar, setSelectedCircuit } = useUI();
+  const { setSelectedCar, setSelectedCircuit, startApp } = useUI();
 
   const prevCar = () => {
     setCurrentCarIndex((prev) => (prev === 0 ? cars.length - 1 : prev - 1));
@@ -33,6 +33,7 @@ export default function Menu() {
   const startGame = () => {
     setSelectedCar(currentCar);
     setSelectedCircuit(currentCircuit);
+    startApp();
     console.log(currentCar, currentCircuit);
   };
 
@@ -68,7 +69,7 @@ export default function Menu() {
           <div className="selectItem flex" key={currentCircuit.id}>
             <h3>{currentCircuit.name}</h3>
             <img
-              src={currentCircuit.img}
+              src={currentCircuit.imgSelect}
               className="circuitLogo"
               alt={currentCircuit.name}
             />

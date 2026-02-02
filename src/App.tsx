@@ -1,5 +1,5 @@
 import { useUI } from "context/UIContext";
-import Circuit from "./views/circuit/circuit";
+import Game from "./views/game/game";
 import Menu from "./views/menu/menu";
 import "./styles/styles.css"
 
@@ -11,7 +11,7 @@ export default function App() {
     <>
       {started ? (
         <section>
-          <Circuit />
+          <Game />
         </section>
       ) : (
         <Menu />
