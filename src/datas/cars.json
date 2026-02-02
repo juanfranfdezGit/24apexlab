@@ -5,7 +5,8 @@
         "topSpeed": 320,
         "acceleration": 3.5,
         "handling": 8.5,
-        "img": "/assets/cars/f1.png"
+        "img": "/assets/cars/f1.png",
+        "imgSelect": "/assets/cars/f1Select.png"
     },
     {
         "id": 2,
@@ -13,6 +14,7 @@
         "topSpeed": 260,
         "acceleration": 2.5,
         "handling": 9.0,
-        "img": "/assets/cars/gt3.png"
+        "img": "/assets/cars/gt3.png",
+        "imgSelect": "/assets/cars/gt3Select.png"
     }
 ]
