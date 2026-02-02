@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Ferrari F1 Team",
+        "topSpeed": 320,
+        "acceleration": 3.5,
+        "handling": 8.5,
+        "img": "/assets/cars/f1.png"
+    },
+    {
+        "id": 2,
+        "name": "Ferrari GT3",
+        "topSpeed": 260,
+        "acceleration": 2.5,
+        "handling": 9.0,
+        "img": "/assets/cars/gt3.png"
+    }
+]
