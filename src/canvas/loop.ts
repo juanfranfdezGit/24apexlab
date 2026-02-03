@@ -3,15 +3,13 @@ import { drawCar } from "./drawCar";
 import { racingLine, lerpPath, getHeading } from "../sim/path";
 import { useUI } from "context/UIContext";
 
-export function startLoop(canvas: HTMLCanvasElement) {
-  const selectedCar = useUI().selectedCar;
-
+export function startLoop(canvas: HTMLCanvasElement, carImgSrc: string) {
   const ctx = canvas.getContext("2d")!;
   let t = 0;
   let rafId: number;
 
   const carImg = new Image();
-  carImg.src = selectedCar?.img || "";
+  carImg.src = carImgSrc;
 
   function update() {
     t += 0.001;
@@ -21,13 +19,13 @@ export function startLoop(canvas: HTMLCanvasElement) {
   function frame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    drawRacingLine(ctx, racingLine);
+    if (racingLine.length > 0) {
+      drawRacingLine(ctx, racingLine);
 
-    const pos = lerpPath(racingLine, t);
-    const angle = getHeading(racingLine, t);
+      const pos = lerpPath(racingLine, t);
+      const angle = getHeading(racingLine, t);
 
-    if (carImg.complete) {
-      drawCar(ctx, carImg, pos, angle);
+      if (carImg.complete) drawCar(ctx, carImg, pos, angle);
     }
 
     update();

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useUI } from "context/UIContext";
+import { initRacingLine } from "../../sim/path";
 
 export default function Game() {
   const { selectedCircuit } = useUI();
@@ -15,6 +16,12 @@ export default function Game() {
       .then(setSvgContent);
   }, [selectedCircuit]);
 
+  useEffect(() => {
+    if (!svgRef.current) return;
+    const pathElement = svgRef.current.querySelector<SVGPathElement>("#track");
+    if (pathElement) initRacingLine(pathElement);
+  }, [svgContent]);
+
   return (
     <>
       <section className="circuitSection flex">
@@ -26,12 +33,7 @@ export default function Game() {
           dangerouslySetInnerHTML={{ __html: svgContent }}
         />
 
-        <canvas
-          ref={canvasRef}
-          width={1200}
-          height={800}
-          className="carCanvas"
-        />
+        <canvas ref={canvasRef} className="carCanvas" />
       </section>
     </>
   );
