@@ -4,7 +4,7 @@ export function drawCar(
   pos: { x: number; y: number },
   angle: number,
 ) {
-  const SCALE = 0.15;
+  const SCALE = .15;
 
   ctx.save();
   ctx.translate(pos.x, pos.y);

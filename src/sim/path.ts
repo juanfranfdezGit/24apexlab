@@ -1,5 +1,3 @@
-import { svgPathToPoints } from "./svgToPoints";
-
 export type Point = { x: number; y: number };
 
 export function lerpPath(path: Point[], t: number): Point {
@@ -23,10 +21,4 @@ export function getHeading(path: Point[], t: number): number {
   const p2 = lerpPath(path, Math.min(t + 0.01, 1));
 
   return Math.atan2(p2.y - p1.y, p2.x - p1.x);
-}
-
-export let racingLine: Point[] = [];
-
-export function initRacingLine(pathElement: SVGPathElement) {
-  racingLine = svgPathToPoints(pathElement, 500);
 }
