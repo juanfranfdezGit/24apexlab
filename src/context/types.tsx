@@ -8,5 +8,6 @@ export type Car = {
 export type Circuit = {
   id: number;
   name: string;
-  img: string;
+  svgPath: string;
+  imgSelect: string;
 };

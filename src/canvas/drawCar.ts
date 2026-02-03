@@ -4,9 +4,17 @@ export function drawCar(
   pos: { x: number; y: number },
   angle: number,
 ) {
+  const SCALE = 0.15;
+
   ctx.save();
   ctx.translate(pos.x, pos.y);
-  ctx.rotate(angle + Math.PI / 120);
-  ctx.drawImage(img, -img.width / 2, -img.height / 2);
+  ctx.rotate(angle);
+  ctx.drawImage(
+    img,
+    (-img.width * SCALE) / 2,
+    (-img.height * SCALE) / 2,
+    img.width * SCALE,
+    img.height * SCALE,
+  );
   ctx.restore();
 }

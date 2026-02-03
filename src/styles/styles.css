@@ -1,4 +1,5 @@
 @import "./mainMenu/mainMenu.css";
+@import "./circuit/circuit.css";
 
 * {
     margin: 0;

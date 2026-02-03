@@ -1,14 +1,17 @@
 import { drawRacingLine } from "./drawLine";
 import { drawCar } from "./drawCar";
 import { racingLine, lerpPath, getHeading } from "../sim/path";
+import { useUI } from "context/UIContext";
 
 export function startLoop(canvas: HTMLCanvasElement) {
+  const selectedCar = useUI().selectedCar;
+
   const ctx = canvas.getContext("2d")!;
   let t = 0;
   let rafId: number;
 
   const carImg = new Image();
-  carImg.src = "/assets/f1.png";
+  carImg.src = selectedCar?.img || "";
 
   function update() {
     t += 0.001;

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Circuito de Jerez",
-    "img": "/assets/circuits/jerez.svg",
+    "svgPath": "/assets/circuits/jerez.svg",
     "imgSelect": "/assets/circuits/jerezLogo.png"
   }
 ]

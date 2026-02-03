@@ -1,5 +1,5 @@
 import { useUI } from "context/UIContext";
-import Game from "./views/game/game";
+import Game from "./views/circuit/circuit";
 import Menu from "./views/menu/menu";
 import "./styles/styles.css"
 
