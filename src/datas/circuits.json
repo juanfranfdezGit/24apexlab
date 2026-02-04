@@ -3,6 +3,14 @@
     "id": 1,
     "name": "Circuito de Jerez",
     "svgPath": "/assets/circuits/jerez.svg",
-    "imgSelect": "/assets/circuits/jerezLogo.png"
+    "imgSelect": "/assets/circuits/jerezLogo.png",
+    "svgPathId": 3164
+  },
+  {
+    "id": 2,
+    "name": "Autódromo Internacional do Algarve",
+    "svgPath": "/assets/circuits/portimao.svg",
+    "imgSelect": "/assets/circuits/portimaoLogo.png",
+    "svgPathId": 3031
   }
 ]

@@ -10,4 +10,5 @@ export type Circuit = {
   name: string;
   svgPath: string;
   imgSelect: string;
+  svgPathId: number;
 };

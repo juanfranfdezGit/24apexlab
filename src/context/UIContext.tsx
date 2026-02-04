@@ -3,6 +3,7 @@ import type { Car, Circuit } from "./types";
 
 type UIContextType = {
   started: boolean;
+  logOut: () => void;
   startApp: () => void;
   selectedCar: Car | null;
   setSelectedCar: (car: Car) => void;
@@ -34,6 +35,16 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("started", "true");
   };
 
+  const logOut = () => {
+    setStarted(false);
+    setSelectedCarState(null);
+    setSelectedCircuitState(null);
+
+    localStorage.removeItem("started");
+    localStorage.removeItem("selectedCar");
+    localStorage.removeItem("selectedCircuit");
+  };
+
   useEffect(() => {
     const storedStarted = localStorage.getItem("started");
     if (storedStarted === "true") setStarted(true);
@@ -49,6 +60,7 @@ export function UIProvider({ children }: { children: React.ReactNode }) {
     <UIContext.Provider
       value={{
         started,
+        logOut,
         startApp,
         selectedCar,
         setSelectedCar,

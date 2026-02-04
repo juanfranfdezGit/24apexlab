@@ -1,37 +1,46 @@
+@import url("./interface/carActions.css");
+@import url("./interface/help.css");
+@import url("./interface/laps.css");
+@import url("./interface/circuitLogo.css");
+
 .circuitSection {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .back img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .circuitSvg {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    z-index: 0;
-    opacity: 0;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  z-index: 0;
+  opacity: 0;
 }
 
-.carCanvas {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    z-index: 5;
-    filter: drop-shadow(0 0 5px black);
-    margin-left: 10vw;
+.canvas {
+  position: absolute;
+  inset: 0; 
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  filter: drop-shadow(0 0 5px black);
 }

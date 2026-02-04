@@ -1,0 +1,13 @@
+.circuitLogoInterface {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 450px;
+    z-index: 5;
+}
+
+.circuitLogoInterface img {
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 2px white);
+}

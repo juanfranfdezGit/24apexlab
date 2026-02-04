@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { useUI } from "context/UIContext";
 import { svgPathToPoints } from "sim/svgToPoints";
 import { startLoop } from "../../canvas/loop";
+import CarActions from "./interface/carActions";
+import Help from "./interface/help";
+import Laps from "./interface/laps";
+import CircuitLogo from "./interface/circuitLogo";
 
 export default function Game() {
   const { selectedCircuit, selectedCar } = useUI();
@@ -19,9 +23,14 @@ export default function Game() {
   useEffect(() => {
     if (!svgContent || !canvasRef.current) return;
 
-    const path = document.querySelector<SVGPathElement>("#path3164");
+    const path = document.querySelector<SVGPathElement>(
+      "#path" + selectedCircuit?.svgPathId,
+    );
     if (!path) {
-      console.error("No se encuentra #path3164 en el SVG");
+      console.error(
+        "No se encuentra #path" + selectedCircuit?.svgPathId + " en el SVG",
+      );
+      console.log("SVG Content:", svgContent);
       return;
     }
 
@@ -44,12 +53,16 @@ export default function Game() {
           dangerouslySetInnerHTML={{ __html: svgContent }}
         />
 
-        <canvas
-          ref={canvasRef}
-          width={1400}
-          height={1200}
-          className="carCanvas"
-        />
+        <div className="canvas">
+          <canvas ref={canvasRef} width={1300} height={1100} />
+        </div>
+
+        <div className="interface">
+          <CarActions />
+          <Help />
+          <Laps />
+          <CircuitLogo logo={selectedCircuit?.imgSelect} alt={selectedCircuit?.name} />
+        </div>
       </section>
     </>
   );

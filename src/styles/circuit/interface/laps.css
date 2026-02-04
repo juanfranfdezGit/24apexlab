@@ -1,0 +1,54 @@
+.laps {
+  position: absolute;
+  left: 3rem;
+  top: 3rem;
+  max-height: 25vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  z-index: 5;
+}
+
+.laps::-webkit-scrollbar {
+  height: 8px;
+  width: 12px;
+}
+
+.laps::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .4);
+}
+
+.laps::-webkit-scrollbar-thumb {
+  background: darkred;
+}
+.laps table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.laps th,
+.laps td {
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid #c00000;
+}
+
+.laps thead {
+  background-color: #0a0a0a;
+}
+
+.laps th {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.laps tbody tr:nth-child(even) {
+  background-color: #111;
+}
+
+.laps tbody tr:hover {
+  background-color: #1a1a1a;
+}

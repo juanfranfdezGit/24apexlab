@@ -1,0 +1,19 @@
+.help {
+  position: absolute;
+  bottom: 3rem;
+  left: 8rem;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  gap: 2rem;
+}
+
+.help img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 10px black);
+}
+
+.help img:first-child {
+  filter: drop-shadow(0 0 2px white);
+}

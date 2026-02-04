@@ -1,0 +1,43 @@
+.pedals {
+  position: absolute;
+  bottom: 6rem;
+  right: 28rem;
+  width: 180px;
+  height: 180px;
+}
+
+.pedals img {
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+
+.brake.action {
+    filter: drop-shadow(0 0 20px darkred);
+}
+.accelerator.action {
+    filter: drop-shadow(0 0 20px green);
+}
+
+.speed {
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    width: 300px;
+    height: 300px;
+}
+
+.speed p {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 4;
+    color: white;
+    font-size: 3.5rem;
+}
+
+.speed img {
+    width: 100%;
+    height: 100%;
+}
