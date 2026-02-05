@@ -12,3 +12,18 @@ export type Circuit = {
   imgSelect: string;
   svgPathId: number;
 };
+
+export type carState = {
+  t: number;
+  speed: number;
+  fuel: number;
+  lap: number;
+};
+
+type AIState = {
+  t: number;
+  speed: number;
+  curvatureAhead: number;
+};
+
+type Action = "accelerate" | "brake" | "none";

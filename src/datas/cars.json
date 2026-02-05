@@ -4,7 +4,6 @@
         "name": "Ferrari F1 Team",
         "topSpeed": 320,
         "acceleration": 3.5,
-        "handling": 8.5,
         "img": "/assets/cars/f1.png",
         "imgSelect": "/assets/cars/f1Select.png"
     },
@@ -13,8 +12,15 @@
         "name": "Ferrari GT3",
         "topSpeed": 260,
         "acceleration": 2.5,
-        "handling": 9.0,
         "img": "/assets/cars/gt3.png",
         "imgSelect": "/assets/cars/gt3Select.png"
+    },
+    {
+        "id": 3,
+        "name": "Hype F1 Racing",
+        "topSpeed": 328,
+        "acceleration": 3.1,
+        "img": "/assets/cars/f1Hype.png",
+        "imgSelect": "/assets/cars/f1HypeSelect.png"
     }
 ]

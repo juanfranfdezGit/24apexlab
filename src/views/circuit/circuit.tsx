@@ -44,9 +44,7 @@ export default function Game() {
   return (
     <>
       <section className="circuitSection flex">
-        <div className="back">
-          <img src="/assets/circuits/circuitTerrain.jpg" alt="terrain" />
-        </div>
+        <div className="back"></div>
 
         <div
           className="circuitSvg"
@@ -54,14 +52,17 @@ export default function Game() {
         />
 
         <div className="canvas">
-          <canvas ref={canvasRef} width={1300} height={1100} />
+          <canvas ref={canvasRef} width={1600} height={1300} />
         </div>
 
         <div className="interface">
           <CarActions />
           <Help />
           <Laps />
-          <CircuitLogo logo={selectedCircuit?.imgSelect} alt={selectedCircuit?.name} />
+          <CircuitLogo
+            logo={selectedCircuit?.imgSelect}
+            alt={selectedCircuit?.name}
+          />
         </div>
       </section>
     </>

@@ -2,7 +2,7 @@ export type Point = { x: number; y: number };
 
 export function drawRacingLine(ctx: CanvasRenderingContext2D, line: Point[]) {
   ctx.strokeStyle = "#474747";
-  ctx.lineWidth = 40;
+  ctx.lineWidth = 70;
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
 
