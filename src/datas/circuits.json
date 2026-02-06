@@ -12,5 +12,12 @@
     "svgPath": "/assets/circuits/portimao.svg",
     "imgSelect": "/assets/circuits/portimaoLogo.png",
     "svgPathId": 3031
+  },
+  {
+    "id": 3,
+    "name": "500 miles de Indianápolis",
+    "svgPath": "/assets/circuits/indianapolis.svg",
+    "imgSelect": "/assets/circuits/indianapolisLogo.png",
+    "svgPathId": 4
   }
 ]

@@ -4,7 +4,6 @@ import { svgPathToPoints } from "sim/svgToPoints";
 import { startLoop } from "../../canvas/loop";
 import CarActions from "./interface/carActions";
 import Help from "./interface/help";
-import Laps from "./interface/laps";
 import CircuitLogo from "./interface/circuitLogo";
 
 export default function Game() {
@@ -52,13 +51,13 @@ export default function Game() {
         />
 
         <div className="canvas">
-          <canvas ref={canvasRef} width={1600} height={1300} />
+          <canvas ref={canvasRef} width={4600} height={2400} />
         </div>
 
         <div className="interface">
           <CarActions />
           <Help />
-          <Laps />
+          {/* <Laps /> */}
           <CircuitLogo
             logo={selectedCircuit?.imgSelect}
             alt={selectedCircuit?.name}

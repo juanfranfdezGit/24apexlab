@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1636.4659"
+   height="832.50201"
+   id="svg2383"
+   sodipodi:version="0.32"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="indianapolis.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.0"
+   inkscape:export-filename="D:\Images\Race Tracks\Indianapolis Motor Speedway - Speedway.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"
+   style="display:inline"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <defs
+     id="defs2385">
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="18.181098"
+       height="18.137641"
+       patternTransform="matrix(0.1737876,0,0,0.1737876,763.47719,1693.9071)"
+       id="pattern4912">
+      <g
+         id="g4907"
+         transform="translate(-1025.5348,-1215.2814)">
+        <rect
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4899"
+           width="18.172573"
+           height="18.095789"
+           x="1025.5348"
+           y="1215.2814" />
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4903"
+           width="9.0746527"
+           height="9.0746527"
+           x="1025.5348"
+           y="1215.2814" />
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4905"
+           width="9.0746527"
+           height="9.0746527"
+           x="1034.6412"
+           y="1224.3444" />
+      </g>
+    </pattern>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 726.18106 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 726.18106 : 1"
+       inkscape:persp3d-origin="372.04724 : 550.78736 : 1"
+       id="perspective2391" />
+    <inkscape:perspective
+       id="perspective2457"
+       inkscape:persp3d-origin="372.04724 : 550.78736 : 1"
+       inkscape:vp_z="744.09448 : 726.18106 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 726.18106 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#ffffff"
+     borderopacity="0.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="0"
+     inkscape:zoom="0.49455476"
+     inkscape:cx="645.02463"
+     inkscape:cy="338.68848"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2388">
+    <rdf:RDF />
+  </metadata>
+  <g
+     inkscape:label="Track"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(-1213.7262,-735.15364)">
+    <path
+       id="path4"
+       style="display:inline;fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:0.313909;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 2490.1861,761.9713 c -14.1117,0.14144 -28.1169,0.74043 -41.8931,0.82629 -308.0673,1.92007 -616.3004,2.76173 -924.2972,7.34531 -20.7309,0.30851 -41.7875,2.62564 -61.9586,7.50619 -21.1653,5.12117 -42.4118,12.5969 -61.923,22.47081 -17.4897,8.85098 -33.5959,20.78307 -48.2451,33.27351 -16.1026,13.72929 -31.6508,29.07421 -44.7558,45.96361 -12.0756,15.56297 -21.2653,33.17559 -29.866,50.20813 -5.9246,11.73299 -10.5265,24.23863 -14.0314,36.73088 -2.9944,10.67176 -4.6729,21.72721 -5.4481,32.64723 -6.213,87.50254 -11.8768,175.30634 -15.6778,262.93934 -0.4183,9.643 1.19,19.1043 3.3326,27.933 4.2265,17.4177 8.9946,35.2493 15.9503,52.2087 6.3833,15.5651 15.1201,29.878 23.3978,43.7676 7.5974,12.7475 14.9548,26.9441 25.8266,38.7355 11.6337,12.6172 25.6356,23.308 39.8582,32.4081 18.9941,12.1532 39.3067,23.772 60.6709,31.9776 17.2851,6.6394 35.8783,9.8111 53.7333,11.9073 21.5422,2.5289 43.2676,2.2951 64.5083,2.1179 118.2486,-0.9867 236.4841,-2.5382 354.7146,-4.1403 111.521,-1.5114 223.0376,-3.0673 334.5486,-4.227 105.7118,-1.0995 211.7276,0.6527 317.5679,-2.0832 16.4718,-0.4258 32.892,-3.3847 48.4822,-7.541 17.7641,-4.7359 35.7056,-10.895 52.36,-19.3265 18.6656,-9.4497 37.0782,-20.8288 53.3749,-34.2607 15.9027,-13.1067 30.4798,-28.5573 42.7969,-45.0201 11.375,-15.2029 20.2789,-32.4149 27.8664,-49.3816 6.3226,-14.138 10.8142,-29.2304 13.9911,-44.1588 2.5749,-12.0996 3.6511,-24.7242 3.2566,-37.1224 -2.7557,-86.5589 -6.4929,-173.4307 -12.5419,-259.83853 -0.9747,-13.92111 -4.4259,-27.49091 -8.6241,-40.26654 -5.6821,-17.28984 -12.114,-35.13895 -21.3984,-51.42583 -10.7394,-18.83926 -23.402,-37.50704 -38.4848,-53.50463 -15.8047,-16.76395 -34.5145,-31.12065 -53.2638,-43.84568 -15.2858,-10.3749 -32.0827,-19.13361 -49.3001,-25.77163 -19.6494,-7.5755 -40.6338,-14.47777 -62.0797,-17.12601 -14.1306,-1.7449 -28.3367,-2.06785 -42.4483,-1.92655 z" />
+  </g>
+</svg>
