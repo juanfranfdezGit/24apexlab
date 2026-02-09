@@ -24,18 +24,34 @@ export function startLoop(
   const carImage = new Image();
   carImage.src = selectedCar?.img || "";
 
-  function frame() {
+  // Fixed timestep for stable simulation
+  // 60fps
+  const fixedDelta = 1 / 60;
+  let lastTime = performance.now();
+  let accumulator = 0;
+
+  function frame(now: number) {
+    const deltaTime = (now - lastTime) / 1000;
+    lastTime = now;
+
+    accumulator += deltaTime;
+
     const input = getInput();
 
-    updateWorld(world, input, aiAction);
+    while (accumulator >= fixedDelta) {
+      updateWorld(world, input, aiAction);
 
-    const sensors = computeAISensors(world);
-    sendState(sensors);
+      const sensors = computeAISensors(world);
+      sendState(sensors);
 
+      accumulator -= fixedDelta;
+    }
+
+    // Independent rendering for smoother visuals
     renderWorld(ctx, canvas, world, carImage);
 
     requestAnimationFrame(frame);
   }
 
-  carImage.onload = frame;
+  carImage.onload = () => requestAnimationFrame(frame);
 }
