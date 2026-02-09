@@ -1,4 +1,4 @@
-import { lerpPath, getHeading } from "../../sim/path";
+import { lerpPath, getHeading } from "./path";
 
 export interface AI {
   t: number;

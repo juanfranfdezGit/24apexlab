@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import type { Car, Circuit } from "./types";
+import type { Car, Circuit } from "../engine/types";
 
 type UIContextType = {
   started: boolean;

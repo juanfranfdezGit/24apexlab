@@ -6,6 +6,7 @@
   height: 100px;
   cursor: pointer;
   gap: 2rem;
+  z-index: 100;
 }
 
 .help img {

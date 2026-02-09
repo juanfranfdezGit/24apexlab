@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useUI } from "context/UIContext";
 import { svgPathToPoints } from "sim/svgToPoints";
-import { startLoop } from "../../canvas/loop";
+import { startLoop } from "../../engine/loop";
 import CarActions from "./interface/carActions";
 import Help from "./interface/help";
 import CircuitLogo from "./interface/circuitLogo";
