@@ -16,8 +16,16 @@ export function renderWorld(
   const playerPos = lerpPath(world.racingLine, world.player.t);
   const playerAngle = getHeading(world.racingLine, world.player.t);
 
-  const aiPos = lerpPath(world.racingLine, world.ai.t);
+  const aiBase = lerpPath(world.racingLine, world.ai.t);
   const aiAngle = getHeading(world.racingLine, world.ai.t);
+
+  const perpX = Math.cos(aiAngle + Math.PI / 2);
+  const perpY = Math.sin(aiAngle + Math.PI / 2);
+
+  const aiPos = {
+    x: aiBase.x + perpX * world.ai.offset,
+    y: aiBase.y + perpY * world.ai.offset,
+  };
 
   drawCar(ctx, carImage, playerPos, playerAngle);
   drawCar(ctx, carImage, aiPos, aiAngle);

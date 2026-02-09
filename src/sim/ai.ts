@@ -23,8 +23,6 @@ export function updateAI(
   trackWidth: number,
 ) {
   const heading = getHeading(racingLine, ai.t);
-  const perpX = Math.cos(heading + Math.PI / 2);
-  const perpY = Math.sin(heading + Math.PI / 2);
 
   const target = action.lateralTarget ?? 0;
   const lateralSpeed = 1.0;
@@ -41,7 +39,16 @@ export function updateAI(
 }
 
 export function getAIPosition(ai: AI, path: { x: number; y: number }[]) {
-  return lerpPath(path, ai.t);
+  const base = lerpPath(path, ai.t);
+  const heading = getHeading(path, ai.t);
+
+  const perpX = Math.cos(heading + Math.PI / 2);
+  const perpY = Math.sin(heading + Math.PI / 2);
+
+  return {
+    x: base.x + perpX * ai.offset,
+    y: base.y + perpY * ai.offset,
+  };
 }
 
 export function getAIAngle(ai: AI, path: { x: number; y: number }[]) {

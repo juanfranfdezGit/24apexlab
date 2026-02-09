@@ -9,6 +9,12 @@ export function drawCar(
   ctx.save();
   ctx.translate(pos.x, pos.y);
   ctx.rotate(angle);
+
+  ctx.shadowColor = "rgba(0,0,0,0.4)";
+  ctx.shadowBlur = 12;
+  ctx.shadowOffsetX = 4;
+  ctx.shadowOffsetY = 6;
+
   ctx.drawImage(
     img,
     (-img.width * SCALE) / 2,

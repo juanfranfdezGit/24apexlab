@@ -31,13 +31,17 @@ export function startLoop(
   let accumulator = 0;
 
   function frame(now: number) {
+    // Calculate elapsed time
+    // Time between frames
     const deltaTime = (now - lastTime) / 1000;
     lastTime = now;
 
+    // Accumulate pending time
     accumulator += deltaTime;
 
     const input = getInput();
 
+    // Update the world as many times as needed to catch up 60fps
     while (accumulator >= fixedDelta) {
       updateWorld(world, input, aiAction);
 
