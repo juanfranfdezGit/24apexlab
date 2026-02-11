@@ -4,6 +4,8 @@ export function createLapCounter(): LapState {
   return {
     lap: 0,
     prevT: 0,
+    lastLapTime: 0,
+    totalTime: 0,
   };
 }
 
@@ -20,10 +22,16 @@ export function updateLapCounter(
   currentT: number,
   finishIndex: number,
   pathLength: number,
+  deltaTime: number,
 ) {
   const finishT = finishIndex / pathLength;
 
+  lapState.lastLapTime += deltaTime;
+
   if (crossedFinish(lapState.prevT, currentT, finishT)) {
+    lapState.totalTime += lapState.lastLapTime;
+    lapState.lastLapTime = 0;
+
     lapState.lap += 1;
   }
 

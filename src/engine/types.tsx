@@ -45,4 +45,6 @@ export interface InputState {
 export type LapState = {
   lap: number;
   prevT: number;
+  lastLapTime: number,
+  totalTime: number
 };

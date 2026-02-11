@@ -30,7 +30,7 @@ export function updateAI(
   racingLine: { x: number; y: number }[],
   action: AIAction,
   trackWidth: number,
-  finishIndex: number
+  finishIndex: number,
 ) {
   const heading = getHeading(racingLine, ai.t);
 
@@ -47,7 +47,15 @@ export function updateAI(
   ai.t += ai.speed;
   if (ai.t > 1) ai.t -= 1;
 
-  updateLapCounter(ai.lapState, ai.t, finishIndex, racingLine.length);
+  const deltaTime = 1 / 60;
+
+  updateLapCounter(
+    ai.lapState,
+    ai.t,
+    finishIndex,
+    racingLine.length,
+    deltaTime,
+  );
 }
 
 export function getAIPosition(ai: AI, path: { x: number; y: number }[]) {
