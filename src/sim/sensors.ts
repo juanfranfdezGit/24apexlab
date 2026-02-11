@@ -8,6 +8,10 @@ export interface AISensorState {
   rightDist: number;
   frontDist: number;
   speed: number;
+  t: number;
+  lap: number;
+  lastLapTime: number;
+  totalTime: number;
 }
 
 export function computeAISensors(world: WorldState): AISensorState {
@@ -33,11 +37,17 @@ export function computeAISensors(world: WorldState): AISensorState {
   const dy = nextPoint.y - (aiPos.y + ai.offset * perpY);
   const frontDist = Math.sqrt(dx * dx + dy * dy);
 
+  const { lap, lastLapTime, totalTime } = ai.lapState;
+
   return {
     lateralOffset: ai.offset,
     leftDist,
     rightDist,
     frontDist,
     speed: ai.speed,
+    t: ai.t,
+    lap,
+    lastLapTime,
+    totalTime,
   };
 }

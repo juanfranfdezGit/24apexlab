@@ -9,7 +9,7 @@ const selectedCircuit = JSON.parse(localStorage.getItem("selectedCircuit")!);
 export function createWorld(racingLine: Point[]): WorldState {
   return {
     player: createPlayer(),
-    ai: createAI(),
+    ai: createAI(selectedCircuit.finishIndex, racingLine.length),
     finishIndex: selectedCircuit.finishIndex,
     racingLine,
     trackWidth: 120,
@@ -23,5 +23,11 @@ export function updateWorld(
 ) {
   updatePlayer(world.player, input.accelerating, input.braking);
 
-  updateAI(world.ai, world.racingLine, aiAction, world.trackWidth, world.finishIndex);
+  updateAI(
+    world.ai,
+    world.racingLine,
+    aiAction,
+    world.trackWidth,
+    world.finishIndex,
+  );
 }

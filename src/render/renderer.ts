@@ -27,6 +27,31 @@ export function renderWorld(
     y: aiBase.y + perpY * world.ai.offset,
   };
 
+  // --- Dibuja la trazada actual de la IA ---
+  if (!world.ai.currentTrace) world.ai.currentTrace = [];
+  world.ai.currentTrace.push(aiPos);
+
+  ctx.strokeStyle = "rgba(0,255,0,0.5)";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  world.ai.currentTrace.forEach((p, i) => {
+    if (i === 0) ctx.moveTo(p.x, p.y);
+    else ctx.lineTo(p.x, p.y);
+  });
+  ctx.stroke();
+
+  // --- Dibuja la trazada óptima (best_bias) ---
+  if (world.ai.bestBiasTrace) {
+    ctx.strokeStyle = "rgb(99, 10, 91)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    world.ai.bestBiasTrace.forEach((p, i) => {
+      if (i === 0) ctx.moveTo(p.x, p.y);
+      else ctx.lineTo(p.x, p.y);
+    });
+    ctx.stroke();
+  }
+
   drawCar(ctx, carImage, playerPos, playerAngle);
   drawCar(ctx, carImage, aiPos, aiAngle);
 }

@@ -46,6 +46,7 @@ export function startLoop(
       updateWorld(world, input, aiAction);
 
       const sensors = computeAISensors(world);
+
       sendState(sensors);
 
       accumulator -= fixedDelta;

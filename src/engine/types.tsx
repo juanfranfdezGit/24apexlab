@@ -26,7 +26,7 @@ export type Circuit = {
   name: string;
   svgPath: string;
   imgSelect: string;
-  finishIndex: number,
+  finishIndex: number;
   svgPathId: number;
 };
 
@@ -45,6 +45,8 @@ export interface InputState {
 export type LapState = {
   lap: number;
   prevT: number;
-  lastLapTime: number,
-  totalTime: number
+  lastLapTime: number;
+  totalTime: number;
+  bestLapTime?: number;
+  firstLapValid?: boolean;
 };
