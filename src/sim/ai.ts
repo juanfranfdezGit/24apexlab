@@ -1,10 +1,13 @@
+import { LapState } from "engine/types";
 import { lerpPath, getHeading } from "./path";
+import { createLapCounter, updateLapCounter } from "./lapsCounter";
 
 export interface AI {
   t: number;
   speed: number;
   maxSpeed: number;
   offset: number;
+  lapState: LapState;
 }
 
 export interface AIAction {
@@ -13,7 +16,13 @@ export interface AIAction {
 }
 
 export function createAI(): AI {
-  return { t: 0.3, speed: 0.0001, maxSpeed: 0.0018, offset: 0 };
+  return {
+    t: 0.3,
+    speed: 0.0001,
+    maxSpeed: 0.0018,
+    offset: 0,
+    lapState: createLapCounter(),
+  };
 }
 
 export function updateAI(
@@ -21,6 +30,7 @@ export function updateAI(
   racingLine: { x: number; y: number }[],
   action: AIAction,
   trackWidth: number,
+  finishIndex: number
 ) {
   const heading = getHeading(racingLine, ai.t);
 
@@ -36,6 +46,8 @@ export function updateAI(
 
   ai.t += ai.speed;
   if (ai.t > 1) ai.t -= 1;
+
+  updateLapCounter(ai.lapState, ai.t, finishIndex, racingLine.length);
 }
 
 export function getAIPosition(ai: AI, path: { x: number; y: number }[]) {

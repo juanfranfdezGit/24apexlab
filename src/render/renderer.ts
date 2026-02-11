@@ -11,7 +11,7 @@ export function renderWorld(
 ) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  drawTrack(ctx, world.racingLine);
+  drawTrack(ctx, world.racingLine, world.finishIndex);
 
   const playerPos = lerpPath(world.racingLine, world.player.t);
   const playerAngle = getHeading(world.racingLine, world.player.t);

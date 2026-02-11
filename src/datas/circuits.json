@@ -4,6 +4,7 @@
     "name": "Circuito de Jerez",
     "svgPath": "/assets/circuits/jerez.svg",
     "imgSelect": "/assets/circuits/jerezLogo.png",
+    "finishIndex": 350,
     "svgPathId": 3164
   },
   {
@@ -11,6 +12,7 @@
     "name": "Autódromo Internacional do Algarve",
     "svgPath": "/assets/circuits/portimao.svg",
     "imgSelect": "/assets/circuits/portimaoLogo.png",
+    "finishIndex": 350,
     "svgPathId": 3031
   },
   {
@@ -18,6 +20,7 @@
     "name": "500 miles de Indianápolis",
     "svgPath": "/assets/circuits/indianapolis.svg",
     "imgSelect": "/assets/circuits/indianapolisLogo.png",
+    "finishIndex": 350,
     "svgPathId": 4
   }
 ]

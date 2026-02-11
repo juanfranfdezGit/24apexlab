@@ -10,6 +10,7 @@ export interface WorldState {
   player: Player;
   ai: AI;
   racingLine: Point[];
+  finishIndex: number;
   trackWidth: number;
 }
 
@@ -25,6 +26,7 @@ export type Circuit = {
   name: string;
   svgPath: string;
   imgSelect: string;
+  finishIndex: number,
   svgPathId: number;
 };
 
@@ -39,3 +41,8 @@ export interface InputState {
   accelerating: boolean;
   braking: boolean;
 }
+
+export type LapState = {
+  lap: number;
+  prevT: number;
+};
